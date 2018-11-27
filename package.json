@@ -12,7 +12,7 @@
     "build-prod": "node ./build/prod.js",
 
     "postinstall": "npm run copy-fonts",
-    "copy-fonts": "cpy node_modules/framework7-icons/fonts/*.* src/fonts && cpy node_modules/material-design-icons/iconfont/*.{eot,ttf,woff,woff2} src/fonts"
+    "copy-fonts": "cpy node_modules/framework7-icons/fonts/*.* src/style/fonts && cpy node_modules/material-design-icons/iconfont/*.{eot,ttf,woff,woff2} src/style/fonts"
   },
   "dependencies": {
     "framework7": "^3.4.0",
