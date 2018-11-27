@@ -17,7 +17,7 @@ module.exports = {
     './src/app.js'
   ],
   output: {
-    path: resolvePath('www/dev'),
+    path: resolvePath('output/dev'),
     filename: 'app.js',
     publicPath: ''
   },
@@ -32,7 +32,7 @@ module.exports = {
     hot: true,
     open: true,
     compress: true,
-    contentBase: '/www/dev/',
+    contentBase: '/output/dev/',
     watchOptions: {
       poll: true
     }
@@ -119,9 +119,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'app.css'
     }),
-    new CopyWebpackPlugin([{
-      from: resolvePath('static'),
-      to: resolvePath('www/dev/static'),
-    }]),
+    new CopyWebpackPlugin([
+      {
+        from: resolvePath('static'),
+        to: resolvePath('output/dev/static'),
+      }
+    ]),
   ]
 }

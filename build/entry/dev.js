@@ -9,7 +9,7 @@ const config = require('../webpack/webpack.config.dev.js');
 const spinner = ora('正在构建开发版本...')
 spinner.start();
 
-rm('../www/dev/', (removeErr) => {
+rm('../output/dev/', (removeErr) => {
   if (removeErr) throw removeErr;
 
   webpack(config, (err, stats) => {
@@ -29,6 +29,6 @@ rm('../www/dev/', (removeErr) => {
       process.exit(1);
     }
 
-    console.log(chalk.cyan('构建完成.\n'));
+    console.log(chalk.cyan('开发版本构建完成.\n'));
   });
 });

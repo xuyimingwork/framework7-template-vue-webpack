@@ -40,5 +40,5 @@ jspm_packages
 node_modules/
 dist/
 npm-debug.log
-www/
+output/
 src/fonts

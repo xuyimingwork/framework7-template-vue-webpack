@@ -9,7 +9,7 @@ const config = require('../webpack/webpack.config.prod.js');
 const spinner = ora('正在构建生产版本...')
 spinner.start();
 
-rm('../www/prod', (removeErr) => {
+rm('../output/prod', (removeErr) => {
   if (removeErr) throw removeErr;
 
   webpack(config, (err, stats) => {
@@ -29,6 +29,6 @@ rm('../www/prod', (removeErr) => {
       process.exit(1);
     }
 
-    console.log(chalk.cyan('构建完成.\n'));
+    console.log(chalk.cyan('生产版本构建完成.\n'));
   });
 });
