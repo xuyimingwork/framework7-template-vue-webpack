@@ -4,14 +4,15 @@
   "description": "Framework7 Vue Webpack starter app template",
   "private": true,
   "scripts": {
-    "start": "npm run dev",
-    "dev": "webpack-dev-server --config ./build/webpack.config.dev.js",
-    "prod": "webpack-dev-server --config ./build/webpack.config.prod.js",
+    "start": "yarn run dev",
+    "dev": "webpack-dev-server --config ./build/webpack/webpack.config.dev.js",
+    "prod": "webpack-dev-server --config ./build/webpack/webpack.config.prod.js",
     
-    "build-dev": "node ./build/dev.js",
-    "build-prod": "node ./build/prod.js",
+    "build": "yarn run build-dev && yarn run build-prod",
+    "build-dev": "node ./build/entry/dev.js",
+    "build-prod": "node ./build/entry/prod.js",
 
-    "postinstall": "npm run copy-fonts",
+    "postinstall": "yarn run copy-fonts",
     "copy-fonts": "cpy node_modules/framework7-icons/fonts/*.* src/style/fonts && cpy node_modules/material-design-icons/iconfont/*.{eot,ttf,woff,woff2} src/style/fonts"
   },
   "dependencies": {

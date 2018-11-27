@@ -6,10 +6,10 @@ const rm = require('rimraf');
 const webpack = require('webpack');
 const config = require('../webpack/webpack.config.prod.js');
 
-const spinner = ora('building for production...')
+const spinner = ora('正在构建生产版本...')
 spinner.start();
 
-rm('./www/', (removeErr) => {
+rm('../www/prod', (removeErr) => {
   if (removeErr) throw removeErr;
 
   webpack(config, (err, stats) => {
@@ -25,10 +25,10 @@ rm('./www/', (removeErr) => {
     }) + '\n\n');
 
     if (stats.hasErrors()) {
-      console.log(chalk.red('Build failed with errors.\n'));
+      console.log(chalk.red('出现错误，构建失败.\n'));
       process.exit(1);
     }
 
-    console.log(chalk.cyan('Build complete.\n'));
+    console.log(chalk.cyan('构建完成.\n'));
   });
 });

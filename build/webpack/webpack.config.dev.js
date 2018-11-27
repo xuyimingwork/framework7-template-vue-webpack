@@ -8,7 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path');
 
 function resolvePath(dir) {
-  return path.join(__dirname, '..', dir);
+  return path.join(__dirname, '../..', dir);
 }
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
     './src/app.js'
   ],
   output: {
-    path: resolvePath('www'),
+    path: resolvePath('www/dev'),
     filename: 'app.js',
     publicPath: ''
   },
@@ -32,7 +32,7 @@ module.exports = {
     hot: true,
     open: true,
     compress: true,
-    contentBase: '/www/',
+    contentBase: '/www/dev/',
     watchOptions: {
       poll: true
     }
@@ -121,7 +121,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([{
       from: resolvePath('static'),
-      to: resolvePath('www/static'),
+      to: resolvePath('www/dev/static'),
     }]),
   ]
 }

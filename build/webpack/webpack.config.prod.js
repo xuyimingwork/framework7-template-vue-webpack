@@ -10,7 +10,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const path = require('path');
 
 function resolvePath(dir) {
-  return path.join(__dirname, '..', dir);
+  return path.join(__dirname, '../..', dir);
 }
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
     './src/app.js'
   ],
   output: {
-    path: resolvePath('www'),
+    path: resolvePath('www/prod'),
     filename: 'app.js',
     publicPath: ''
   },
@@ -34,7 +34,7 @@ module.exports = {
     hot: true,
     open: true,
     compress: true,
-    contentBase: '/www/',
+    contentBase: '/www/prod/',
     watchOptions: {
       poll: true
     }
@@ -145,7 +145,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([{
       from: resolvePath('static'),
-      to: resolvePath('www/static'),
+      to: resolvePath('www/prod/static'),
     }]),
   ]
 }
