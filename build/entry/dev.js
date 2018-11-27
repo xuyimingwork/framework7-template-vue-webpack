@@ -9,7 +9,7 @@ const config = require('../webpack/webpack.config.dev.js');
 const spinner = ora('正在构建开发版本...')
 spinner.start();
 
-rm('../output/dev/', (removeErr) => {
+rm('./output/dev/', (removeErr) => {
   if (removeErr) throw removeErr;
 
   webpack(config, (err, stats) => {
