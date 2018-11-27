@@ -2,6 +2,7 @@
   "name": "framework7-template-vue-webpack",
   "version": "2.0.0",
   "description": "Framework7 Vue Webpack starter app template",
+  "private": true,
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack-dev-server --config ./build/webpack.config.dev.js",
