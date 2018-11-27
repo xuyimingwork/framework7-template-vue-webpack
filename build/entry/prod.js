@@ -1,8 +1,10 @@
-const webpack = require('webpack');
 const ora = require('ora');
-const rm = require('rimraf');
 const chalk = require('chalk');
-const config = require('./webpack.config.prod.js');
+
+const rm = require('rimraf');
+
+const webpack = require('webpack');
+const config = require('../webpack/webpack.config.prod.js');
 
 const spinner = ora('building for production...')
 spinner.start();
