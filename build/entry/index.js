@@ -9,7 +9,7 @@ const webpack = require('webpack');
 const i18n = {
   'development': '开发',
   'production': '生产',
-}
+};
 
 function run(webpackConfig) {
   const versionName = i18n[webpackConfig.mode];

@@ -1,39 +1,86 @@
-import HomePage from './pages/home.vue';
-import AboutPage from './pages/about.vue';
-import FormPage from './pages/form.vue';
-import DynamicRoutePage from './pages/dynamic-route.vue';
-import NotFoundPage from './pages/not-found.vue';
-
-import PanelLeftPage from './pages/panel-left.vue';
-import PanelRightPage from './pages/panel-right.vue';
-
 export default [
   {
     path: '/',
-    component: HomePage,
+    async(routeTo, routeFrom, resolve, reject) {
+      // dynamic import component; returns promise
+      const vueComponent = () => import('./pages/home.vue');
+      // resolve promise
+      vueComponent().then((vc) => {
+        // resolve with component
+        resolve({ component: vc.default })
+      });
+    },
   },
   {
     path: '/panel-left/',
-    component: PanelLeftPage,
+    async(routeTo, routeFrom, resolve, reject) {
+      // dynamic import component; returns promise
+      const vueComponent = () => import('./pages/panel-left.vue');
+      // resolve promise
+      vueComponent().then((vc) => {
+        // resolve with component
+        resolve({ component: vc.default })
+      });
+    },
   },
   {
     path: '/panel-right/',
-    component: PanelRightPage,
+    async(routeTo, routeFrom, resolve, reject) {
+      // dynamic import component; returns promise
+      const vueComponent = () => import('./pages/panel-right.vue');
+      // resolve promise
+      vueComponent().then((vc) => {
+        // resolve with component
+        resolve({ component: vc.default })
+      });
+    },
   },
   {
     path: '/about/',
-    component: AboutPage,
+    async(routeTo, routeFrom, resolve, reject) {
+      // dynamic import component; returns promise
+      const vueComponent = () => import('./pages/about.vue');
+      // resolve promise
+      vueComponent().then((vc) => {
+        // resolve with component
+        resolve({ component: vc.default })
+      });
+    },
   },
   {
     path: '/form/',
-    component: FormPage,
+    async(routeTo, routeFrom, resolve, reject) {
+      // dynamic import component; returns promise
+      const vueComponent = () => import('./pages/form.vue');
+      // resolve promise
+      vueComponent().then((vc) => {
+        // resolve with component
+        resolve({ component: vc.default })
+      });
+    },
   },
   {
     path: '/dynamic-route/blog/:blogId/post/:postId/',
-    component: DynamicRoutePage,
+    async(routeTo, routeFrom, resolve, reject) {
+      // dynamic import component; returns promise
+      const vueComponent = () => import('./pages/dynamic-route.vue');
+      // resolve promise
+      vueComponent().then((vc) => {
+        // resolve with component
+        resolve({ component: vc.default })
+      });
+    },
   },
   {
     path: '(.*)',
-    component: NotFoundPage,
+    async(routeTo, routeFrom, resolve, reject) {
+      // dynamic import component; returns promise
+      const vueComponent = () => import('./pages/not-found.vue');
+      // resolve promise
+      vueComponent().then((vc) => {
+        // resolve with component
+        resolve({ component: vc.default })
+      });
+    },
   },
 ];
