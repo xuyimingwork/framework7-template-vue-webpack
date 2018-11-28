@@ -1,18 +1,18 @@
 module.exports = {
-  "presets": [
+  'presets': [
     [
-      "@babel/preset-env",
+      '@babel/preset-env',
       {
-        "modules": false,
-        "targets": {
-          "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+        'modules': false,
+        'targets': {
+          'browsers': ['> 1%', 'last 2 versions', 'not ie <= 8']
         }
       }
     ]
   ],
-  "plugins": [
-    "transform-vue-jsx",
+  'plugins': [
+    'transform-vue-jsx',
     // "@babel/plugin-transform-runtime",
-    "@babel/plugin-syntax-dynamic-import"
+    '@babel/plugin-syntax-dynamic-import' 
   ]
 };

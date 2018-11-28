@@ -72,21 +72,21 @@
 </template>
 
 <script>
-  // Import Routes
-  import routes from "../route/routes.js";
+// Import Routes
+import routes from '../route/routes.js';
 
-  export default {
-    data() {
-      return {
-        // Framework7 parameters here
-        f7params: {
-          id: "io.framework7.testapp", // App bundle ID
-          name: "Framework7", // App name
-          theme: "auto", // Automatic theme detection
-          // App routes
-          routes: routes
-        }
-      };
-    }
-  };
+export default {
+  data() {
+    return {
+      // Framework7 parameters here
+      f7params: {
+        id: 'io.framework7.testapp', // App bundle ID
+        name: 'Framework7', // App name
+        theme: 'auto', // Automatic theme detection
+        // App routes
+        routes: routes
+      }
+    };
+  }
+};
 </script>
