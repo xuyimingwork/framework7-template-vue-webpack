@@ -73,7 +73,7 @@
 
 <script>
   // Import Routes
-  import routes from "./routes.js";
+  import routes from "./route/routes.js";
 
   export default {
     data() {

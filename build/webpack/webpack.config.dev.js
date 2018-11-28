@@ -14,7 +14,7 @@ function resolvePath(dir) {
 module.exports = {
   mode: 'development',
   entry: [
-    './src/app.js'
+    './src/app/app.js'
   ],
   output: {
     path: resolvePath('build/output/dev'),
@@ -113,7 +113,7 @@ module.exports = {
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       filename: './index.html',
-      template: './src/index.html',
+      template: './src/app/template/index.html',
       inject: true,
     }),
     new MiniCssExtractPlugin({
