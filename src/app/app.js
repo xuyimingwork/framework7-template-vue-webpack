@@ -20,7 +20,7 @@ import AppStyles from '../style/css/app.css';
 import App from './app.vue';
 
 // Init F7 Vue Plugin
-Framework7.use(Framework7Vue)
+Framework7.use(Framework7Vue);
 
 // Init App
 new Vue({

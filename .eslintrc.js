@@ -5,16 +5,25 @@ module.exports = {
         "es6": true,
         "node": true
     },
-    "extends": "eslint:recommended",
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/essential"
+    ],
     "parserOptions": {
+        "parser": "babel-eslint",
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
     "rules": {
         "indent": [
             "error",
-            4
+            2
         ],
+        // 'vue/script-indent': [
+        //     'warn', 2, {
+        //         'baseIndent': 1
+        //     }
+        // ],
         "linebreak-style": [
             "error",
             "unix"
@@ -26,6 +35,7 @@ module.exports = {
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "no-unused-vars": ["warn"]
     }
 };

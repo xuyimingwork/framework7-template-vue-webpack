@@ -7,7 +7,7 @@ export default [
       // resolve promise
       vueComponent().then((vc) => {
         // resolve with component
-        resolve({ component: vc.default })
+        resolve({ component: vc.default });
       });
     },
   },
@@ -19,7 +19,7 @@ export default [
       // resolve promise
       vueComponent().then((vc) => {
         // resolve with component
-        resolve({ component: vc.default })
+        resolve({ component: vc.default });
       });
     },
   },
@@ -31,7 +31,7 @@ export default [
       // resolve promise
       vueComponent().then((vc) => {
         // resolve with component
-        resolve({ component: vc.default })
+        resolve({ component: vc.default });
       });
     },
   },
@@ -43,7 +43,7 @@ export default [
       // resolve promise
       vueComponent().then((vc) => {
         // resolve with component
-        resolve({ component: vc.default })
+        resolve({ component: vc.default }); 
       });
     },
   },
@@ -55,7 +55,7 @@ export default [
       // resolve promise
       vueComponent().then((vc) => {
         // resolve with component
-        resolve({ component: vc.default })
+        resolve({ component: vc.default });
       });
     },
   },
@@ -67,7 +67,7 @@ export default [
       // resolve promise
       vueComponent().then((vc) => {
         // resolve with component
-        resolve({ component: vc.default })
+        resolve({ component: vc.default });
       });
     },
   },
@@ -79,7 +79,7 @@ export default [
       // resolve promise
       vueComponent().then((vc) => {
         // resolve with component
-        resolve({ component: vc.default })
+        resolve({ component: vc.default });
       });
     },
   },
