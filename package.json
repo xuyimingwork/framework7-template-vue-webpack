@@ -5,20 +5,18 @@
   "private": true,
   "scripts": {
     "init": "yarn",
-    
     "start": "yarn run dev",
     "dev": "webpack-dev-server --config ./build/webpack/webpack.config.dev.js",
     "prod": "webpack-dev-server --config ./build/webpack/webpack.config.prod.js",
-    
     "build": "yarn run build-prod",
     "build-all": "yarn run build-dev && yarn run build-prod",
     "build-dev": "node ./build/entry/dev.js",
     "build-prod": "node ./build/entry/prod.js",
-    
     "postinstall": "yarn run copy-fonts",
     "copy-fonts": "cpy node_modules/framework7-icons/fonts/*.* src/style/fonts && cpy node_modules/material-design-icons/iconfont/*.{eot,ttf,woff,woff2} src/style/fonts"
   },
   "dependencies": {
+    "debug": "^4.1.0",
     "framework7": "^3.4.0",
     "framework7-icons": "^0.9.1",
     "framework7-vue": "^3.4.0",
