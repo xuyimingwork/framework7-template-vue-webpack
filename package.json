@@ -1,17 +1,20 @@
 {
   "name": "framework7-template-vue-webpack",
-  "version": "2.0.0",
+  "version": "0.2.0",
   "description": "Framework7 Vue Webpack starter app template",
   "private": true,
   "scripts": {
     "init": "yarn",
+    
     "start": "yarn run dev",
     "dev": "webpack-dev-server --config ./build/webpack/webpack.config.dev.js",
     "prod": "webpack-dev-server --config ./build/webpack/webpack.config.prod.js",
+    
     "build": "yarn run build-prod",
     "build-all": "yarn run build-dev && yarn run build-prod",
     "build-dev": "node ./build/entry/dev.js",
     "build-prod": "node ./build/entry/prod.js",
+    
     "postinstall": "yarn run copy-fonts",
     "copy-fonts": "cpy node_modules/framework7-icons/fonts/*.* src/style/fonts && cpy node_modules/material-design-icons/iconfont/*.{eot,ttf,woff,woff2} src/style/fonts"
   },
