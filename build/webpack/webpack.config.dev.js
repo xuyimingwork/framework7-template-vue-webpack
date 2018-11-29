@@ -35,6 +35,22 @@ module.exports = {
     contentBase: '/build/output/dev/',
     watchOptions: {
       poll: true
+    },
+    stats: {
+      colors: true,
+      hash: false,
+      version: false,
+      timings: false,
+      assets: false,
+      chunks: false,
+      modules: false,
+      reasons: false,
+      children: false,
+      source: false,
+      errors: true,
+      errorDetails: false,
+      warnings: true,
+      publicPath: false
     }
   },
   module: {
