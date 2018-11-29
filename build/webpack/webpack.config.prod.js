@@ -32,7 +32,7 @@ module.exports = {
   },
   devServer: {
     hot: true,
-    open: true,
+    open: false,
     compress: true,
     contentBase: '/build/output/prod/',
     watchOptions: {
