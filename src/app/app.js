@@ -3,11 +3,9 @@ import Vue from 'vue';
 
 // Import F7
 import Framework7 from 'framework7/framework7.esm.bundle.js';
-// import Framework7 from 'framework7';
 
 // 导入 F7 Vue 插件 -- 引入全部 f7 组件
 import Framework7Vue from 'framework7-vue/framework7-vue.esm.bundle.js';
-// import Framework7Vue from 'framework7-vue';
 
 // Import F7 Styles
 import Framework7Styles from 'framework7/css/framework7.css';
