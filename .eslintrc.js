@@ -38,6 +38,7 @@ module.exports = {
         // 忽略样式变量未使用提示
         "varsIgnorePattern": "[sS]tyle"
       }
-    ]
+    ],
+    "no-console": ["warn"]
   }
 };
