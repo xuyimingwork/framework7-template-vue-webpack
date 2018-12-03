@@ -1,5 +1,5 @@
-import routes from '../../route/routes';
-import pkgJson from '../../../package.json';
+import routes from '@/route/routes';
+import pkgJson from '~/package.json';
 
 const f7params = {
   id: `${pkgJson.name}@${pkgJson.version}`,

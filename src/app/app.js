@@ -11,8 +11,8 @@ import Framework7Vue from 'framework7-vue/framework7-vue.esm.bundle.js';
 import Framework7Styles from 'framework7/css/framework7.css';
 
 // Import Icons and App Custom Styles
-import IconsStyles from '../style/css/icons.css';
-import AppStyles from '../style/css/app.css';
+import IconsStyles from '@/style/css/icons.css';
+import AppStyles from '@/style/css/app.css';
 
 // Import App Component
 import App from './app.vue';

@@ -5,6 +5,8 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const alias = require('./alias');
+
 const path = require('path');
 
 function resolvePath(dir) {
@@ -23,10 +25,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js',
-      '@': resolvePath('src'),
-    }
+    alias
   },
   devServer: {
     hot: true,
